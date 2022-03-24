@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-f
+
 
 
 ReactDOM.render(
   <React.Fragment>
-    <App />
+    <App authorized={true}/>
   </React.Fragment>,
   document.getElementById('root')
 );

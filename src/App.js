@@ -1,13 +1,29 @@
 import React from "react";
 import "./App.css";
+  
 
-
-function App() {
+function SecretComponent() {
   return (
-    <div className="App">
+    <h1>Secret information for authorized users only</h1>
+  )
+}
 
-    </div>
-  );
+function RegularComponent() {
+  return (
+    <h1>Everyone can see this component</h1>
+  )
+}
+
+
+
+function App(props) {
+  return(
+    <>
+   {props.authorized ? <SecretComponent /> : <RegularComponent />}
+   </>
+  )
+
+
 }
 
 export default App;
