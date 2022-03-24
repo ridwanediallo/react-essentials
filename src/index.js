@@ -8,7 +8,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.Fragment>
-    <App authorized={true}/>
+    <App login="ridwanediallo"/>
   </React.Fragment>,
   document.getElementById('root')
 );
