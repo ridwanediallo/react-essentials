@@ -1,46 +1,52 @@
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import React from 'react';
-
-const Header = (props) => {
+function Header(props) {
   return (
-    <Header>
+    <header>
       <h1>{props.name}'s Kitchen</h1>
-    </Header>
+    </header>
   );
-};
+}
 
-const Main = (props) => {
+function Main(props) {
   return (
     <section>
-      <p>We serve the most {props.adjectif} food around</p>
-      <ul>
-        {props.dishes.map((dish) => {
+      <p>
+        We serve the most {props.adjective} food around.
+      </p>
+      <ul style={{ textAlign: "left" }}>
+        {props.dishes.map(dish => (
           <li key={dish.id}>{dish.title}</li>
-        })}
+        ))}
       </ul>
     </section>
   );
-};
+}
 
-const Footer = (props) => {
+function Footer(props) {
   return (
-    <section>
+    <footer>
       <p>Copyright {props.year}</p>
-    </section>
+    </footer>
   );
-};
+}
 
-const dishes = ['Macaroni and cheese', 'Salmon', 'Tofu with vegetables'];
+const dishes = [
+  "Macaroni and Cheese",
+  "Salmon",
+  "Tofu with Vegetables",
+  "Salmon"
+];
 
-const dishesObjs = dishes.map((dish, i) => ({id: i, title: dish}))
+const dishesObjects = dishes.map((dish, i) => ({id: i, title: dish}))
 
 function App() {
   return (
     <div className="App">
-      <Header name={'Ridwan'} />
-      <Main adjectif={'amazing'} dishes={dishesObjs} />
-      <Footer year={new Date().getFullYear} />
+      <Header name="Horacio" />
+      <Main adjective="amazing" dishes={dishesObjects} />
+      <Footer year={new Date().getFullYear()} />
     </div>
   );
 }
