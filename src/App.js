@@ -29,7 +29,7 @@ function App({ login }) {
     );
   return <div>No User Available</div>;
 
-  return <></>;
+
 }
 
 export default App;
